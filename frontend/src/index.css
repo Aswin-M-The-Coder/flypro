@@ -1,0 +1,12 @@
+/* 
+
+.row>* {
+    width:100vw-24px;
+    padding-right: 0;
+    padding-left: 0;
+    overflow-x: hidden;
+}
+
+.col>*{
+    width:100vw-24px;
+} */

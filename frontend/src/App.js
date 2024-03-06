@@ -7,6 +7,10 @@ import Reports from './pages/Reports';
 import Products from './pages/Products';
 import Available from './pages/Available';
 import Auctions from './pages/Auctions';
+import BookAuction from './pages/BookAuction';
+import PersonalTickets from './pages/PersonalTickets';
+import Wallet from './pages/Wallets';
+import FAQ from './pages/FAQ';
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
           <Route path="/products" element={<Products />}/>
           <Route path="/available" element={<Available />}/>
           <Route path="/auction" element={<Auctions />}/>
+          <Route path="/bookauction" element={<BookAuction />}/>
+          <Route path="/personaltickets" element={<PersonalTickets />}/>
+          <Route path="/wallet" element={<Wallet />}/>
+          <Route path="/faq" element={<FAQ />}/>
         </Routes>
       </Router>
     </>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Card, CardTitle, CardText, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { useNavigate } from 'react-router-dom';
 
 function Auctions() {
     // Define initial state with dummy data
@@ -65,9 +66,13 @@ function Auctions() {
             ticket.date.includes(searchDate)
         );
     });
+    const navigate = useNavigate();
+    const handleButtonClick = () => {
+        navigate('/bookauction');
+    };
 
     return (
-        <div>
+        <div style={{ padding:"24px" }}>
             <Row>
                 <Col className="text-center">
                     <h4 style={{ fontSize: "4vw" }}><b>Available Auctions</b></h4>
@@ -110,22 +115,24 @@ function Auctions() {
 
             {/* Map over the filtered data array to render multiple cards */}
             {filteredData.map((ticket, index) => (
-                <Row key={index} style={{ padding: "20px", zIndex: "-1" }}>
+                <Row key={index} style={{ padding: "20px 0", zIndex: "-1" }}>
                     <Col sm={{ offset: 1, order: 1, size: 10 }}>
                         <Card body>
                             <CardTitle tag="h5">{ticket.from} -&gt; {ticket.to}</CardTitle>
                             <Row>
-                                <Col xs="4">
+                                <Col >
                                     <CardText><b>Date:</b> {ticket.date}</CardText>
                                 </Col>
-                                <Col xs="3">
+                                <Col >
                                     <CardText><b>Time:</b> {ticket.time}</CardText>
                                 </Col>
-                                <Row>
+                                {/* <Row>
+                                    <Col style={{paddingLeft:"1vw"}}>
                                     <CardText><b>Available Seats:</b> {ticket.tickets}</CardText>
-                                </Row>
+                                    </Col>
+                                </Row> */}
                             </Row>
-                            <Button color="primary" style={{ margin: "5px" }}>Book Now</Button>
+                            <Button color="primary" style={{ margin: "5px" }} onClick={handleButtonClick}>participate</Button>
                         </Card>
                     </Col>
                 </Row>

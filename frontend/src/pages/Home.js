@@ -1,10 +1,13 @@
 import React from 'react';
+import { Container, Row } from 'reactstrap';
 
 function Home() {
   return (
-    <div className='home'>
-      <h1>Home</h1>
-    </div>
+    <Container fluid>
+      <Row>
+        <h1>Home</h1>
+      </Row>
+    </Container>
   );
 }
 

@@ -18,7 +18,7 @@ export const SidebarData = [
   },
   {
     title: 'Your Tickets',
-    path: '/reports',
+    path: '/personaltickets',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
@@ -30,13 +30,13 @@ export const SidebarData = [
   },
   {
     title: 'Wallet',
-    path: '/team',
+    path: '/wallet',
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },
   {
     title: 'FAQ',
-    path: '/messages',
+    path: '/faq',
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },
